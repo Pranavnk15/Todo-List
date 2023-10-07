@@ -1,0 +1,19 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+  <h1>Edit Item</h1>
+</div>
+
+<div class="box">
+  <form class="edit-item-form" action="/edit/<%= index %>" method="post">
+    <input
+      type="text"
+      name="updatedItem"
+      value="<%= itemToEdit %>"
+      autocomplete="off"
+    />
+    <button type="submit">Save</button>
+  </form>
+</div>
+
+<%- include("footer") -%>
