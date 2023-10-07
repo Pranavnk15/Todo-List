@@ -1,0 +1,33 @@
+name: Auto Comment for ToDo-List Project
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  auto_comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Comment on Issue
+        if: github.event_name == 'issues' && github.event.action == 'opened'
+        uses: wow-actions/auto-comment@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          issuesOpened: |
+            👋 @{{ author }}
+            Thank you for raising an issue for the ToDo-List project. We'll review it shortly! 🚀
+            Please provide any additional details that might help us understand and address your concern. Also, consider giving our repository a star ⭐️ to show your support!
+
+      - name: Auto Comment on Pull Request
+        if: github.event_name == 'pull_request' && github.event.action == 'opened'
+        uses: wow-actions/auto-comment@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pullRequestOpened: |
+            👋 @{{ author }}
+            Thank you for opening a pull request for the ToDo-List project.
+            Please make sure you've followed our contribution guidelines. We'll review your changes as soon as possible. Don't forget to star our repository ⭐️!
+
