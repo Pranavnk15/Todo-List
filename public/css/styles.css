@@ -99,8 +99,15 @@ button[type="submit"][name="list"] {
   padding: 0;
   line-height: 50px; /* Set line-height to the same as height to vertically center the text */
   border-width: 0;
+  transition: all 0.2s ease-in;
 }
-
+/* Adding hover effet for making it visually distinct and appealing */
+button[type="submit"][name="list"]:hover{
+background-color: black;
+transform: scale(1.1);
+transform: rotate(90deg);
+font-size: 40px;
+}
 
 input[type="text"] {
   text-align: center;
