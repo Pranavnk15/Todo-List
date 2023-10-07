@@ -14,7 +14,7 @@ and stay productive with just a few clicks. Whether you're a productivity guru o
 
 ## Demo
 
-You can see a live demo of the project here: [Todo-List Demo](https://shorturl.at/yCFNU)
+You can see a live demo of the project here: [Todo-List Demo](https://frail-plum-stingray.cyclic.app)
 
 ## Features
 
