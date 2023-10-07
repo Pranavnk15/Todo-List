@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 html {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
@@ -134,4 +136,17 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+}
+
+.mh1{
+  font-size: 60px;
+  margin: 0;
+  color: #00204a;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 4px #4e76b3;
+}
+
+header{
+  text-align: center;
+  padding-top: 20px;
 }
