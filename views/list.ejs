@@ -1,25 +1,72 @@
-
 <%- include("header") -%>
 
-  <div class="box" id="heading">
-    <h1> <%= listTitle %></h1>
+<div class="box" id="heading">
+  <h1><%= listTitle %></h1>
+</div>
 
-  </div>
-
-  <div class="box">
-    <% for(let i = 0; i<newListItems.length; i++) { %>
-    <div class="item">
-      <input type="checkbox">
-      <p> <%= newListItems[i] %> </p>
-    </div>
-
-    <%  } %>
-
-    <form class="item" action="/" method="post">
-      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-      <button type="submit" name="list" value=<%= listTitle %>>+</button>
+<div class="box">
+  <% for(let i = 0; i < newListItems.length; i++) { %>
+  <div class="item">
+    <input type="checkbox" />
+    <p><%= newListItems[i] %></p>
+    <form class="edit-form" action="/edit/<%= i %>" method="post">
+      <button type="button" onclick="toggleEditForm(<%= i %>)">Edit</button>
     </form>
-
+    <form class="delete-form" action="/delete/<%= i %>" method="post">
+      <button type="submit">Delete</button>
+    </form>
   </div>
+  <form
+    class="edit-item-form"
+    id="edit-form-<%= i %>"
+    style="display: none"
+    action="/edit/<%= i %>"
+    method="post"
+  >
+    <input
+      type="text"
+      name="updatedItem"
+      value="<%= newListItems[i] %>"
+      autocomplete="off"
+    />
+    <button type="button" onclick="saveEditedItem(<%= i %>)">Save</button>
+  </form>
+  <% } %>
+
+  <form class="item" action="/" method="post">
+    <input
+      type="text"
+      name="newItem"
+      placeholder="Add a new task"
+      autocomplete="off"
+    />
+    <button type="submit" name="list" value="<%= listTitle %>">+</button>
+  </form>
+</div>
+
+<script>
+  function toggleEditForm(index) {
+    const editForm = document.getElementById(`edit-form-${index}`);
+    const editButton = document.querySelector(
+      `.edit-form button[type="button"][onclick="toggleEditForm(${index})"]`
+    );
+    if (editForm.style.display === "none") {
+      editForm.style.display = "block";
+      editButton.innerText = "Cancel";
+    } else {
+      editForm.style.display = "none";
+      editButton.innerText = "Edit";
+    }
+  }
+
+  function saveEditedItem(index) {
+    const updatedItem = document.querySelector(
+      `#edit-form-${index} input[name="updatedItem"]`
+    ).value;
+    const listItem = document.querySelectorAll(`.item p`)[index];
+    listItem.innerText = updatedItem;
+    toggleEditForm(index); // Hide the edit form after saving
+  }
+</script>
 
 <%- include("footer") -%>

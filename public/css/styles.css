@@ -56,17 +56,47 @@ form {
   margin-left: 20px;
 }
 
-button {
+/* Style the "Edit" and "Delete" buttons as rounded rectangles */
+form.edit-form button,
+form.delete-form button {
+  min-height: 30px; /* Adjust the height as needed */
+  width: auto; /* Adjust the width as needed */
+  padding: 5px 10px; /* Adjust the padding as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  border: none;
+  border-radius: 10px; /* Adjust the border radius as needed */
+  background-color: #A683E3; /* Button background color */
+  color: #fff; /* Button text color */
+  cursor: pointer;
+}
+
+/* Style the "Save" button as a smaller rounded rectangle */
+form.edit-item-form button[type="button"] {
+  min-height: 30px; /* Adjust the height as needed */
+  width: auto; /* Adjust the width as needed */
+  padding: 5px 10px; /* Adjust the padding as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  border: none;
+  border-radius: 10px; /* Adjust the border radius as needed */
+  background-color: #A683E3; /* Button background color */
+  color: #fff; /* Button text color */
+  cursor: pointer;
+}
+
+/* Style the "+" button with the desired background color */
+button[type="submit"][name="list"] {
   min-height: 50px;
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #A683E3;
+  background-color: #A683E3; /* Updated background color */
   color: #fff;
   font-size: 30px;
-  padding-bottom: 6px;
+  padding: 0;
+  line-height: 50px; /* Set line-height to the same as height to vertically center the text */
   border-width: 0;
 }
+
 
 input[type="text"] {
   text-align: center;
