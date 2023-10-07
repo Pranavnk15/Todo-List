@@ -76,3 +76,16 @@ The server will start, and you can access the application in your web browser at
 - Organize your tasks by categorizing them, setting due dates, and prioritizing them for better task management.
 
 If you'd like to contribute to this project, please check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
+
+
+# OUR AMAZING CONTRIBUTORS 🧑‍💻👩‍💻
+<a href="https://github.com/Pranavnk15/Todo-List/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Pranavnk15/Todo-List" />
+</a>
+<br/>
+
+
+<br><br>
+<div align="center">
+Maintained with ♥️ <a href="https://github.com/Pranavnk15">Pranav Khandagale</a>
+</div>
