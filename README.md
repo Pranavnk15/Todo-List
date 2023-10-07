@@ -76,4 +76,3 @@ The server will start, and you can access the application in your web browser at
 - Organize your tasks by categorizing them, setting due dates, and prioritizing them for better task management.
 
 If you'd like to contribute to this project, please check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
-```
