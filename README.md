@@ -22,19 +22,58 @@ You can see a live demo of the project here: [Todo-List Demo](https://frail-plum
 
 - **Organize Your Tasks**: Categorize your tasks, set due dates, and prioritize them to keep your to-do list organized and manageable.
 
-- ## Usage
+## Usage
 
-To use the Todo-List project, simply first "cd" over to the folder in your local machine, install the dependencies, and nodemon app.js, the server will start at 
-localhost:3000. 
+Get started with the Todo-List project on your local machine following these simple steps:
 
-1. Clone this repository to your local machine:
+### Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+- [Node.js](https://nodejs.org/)
+- [Git](https://git-scm.com/)
+
+### Installation
+
+1. **Clone the Repository**:
+
+   First, clone this repository to your local machine using Git:
 
    ```bash
    git clone https://github.com/Pranavnk15/Todo-List.git
+   ```
 
-- Install dependecies, nodemon app.js  file in your preferred command line interface.
+2. **Navigate to the Project Directory**:
 
-- Start organising and manging your tasks.
+   Change your current directory to the project folder:
 
+   ```bash
+   cd Todo-List
+   ```
 
-If you want to contribute to this project then check out [CONTRIBUTING.md](CONTRIBUTING.md) file.
+3. **Install Dependencies**:
+
+   Use Node Package Manager (npm) to install the project's dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Start the Application
+
+Once you've installed the dependencies, you can start the Todo-List application by running the following command:
+
+```bash
+nodemon app.js
+```
+
+The server will start, and you can access the application in your web browser at [http://localhost:3000](http://localhost:3000).
+
+### Usage Tips
+
+- Create and manage your to-do lists effortlessly by entering tasks and using the website's intuitive interface.
+
+- Organize your tasks by categorizing them, setting due dates, and prioritizing them for better task management.
+
+If you'd like to contribute to this project, please check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
+```
