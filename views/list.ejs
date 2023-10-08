@@ -1,72 +1,88 @@
 <%- include("header") -%>
 
-<div class="box" id="heading">
-  <h1><%= listTitle %></h1>
-</div>
-
-<div class="box">
-  <% for(let i = 0; i < newListItems.length; i++) { %>
-  <div class="item">
-    <input type="checkbox" />
-    <p><%= newListItems[i] %></p>
-    <form class="edit-form" action="/edit/<%= i %>" method="post">
-      <button type="button" onclick="toggleEditForm(<%= i %>)">Edit</button>
-    </form>
-    <form class="delete-form" action="/delete/<%= i %>" method="post">
-      <button type="submit">Delete</button>
-    </form>
+  <div class="box" id="heading">
+    <h1>
+      <%= listTitle %>
+    </h1>
   </div>
-  <form
-    class="edit-item-form"
-    id="edit-form-<%= i %>"
-    style="display: none"
-    action="/edit/<%= i %>"
-    method="post"
-  >
-    <input
-      type="text"
-      name="updatedItem"
-      value="<%= newListItems[i] %>"
-      autocomplete="off"
-    />
-    <button type="button" onclick="saveEditedItem(<%= i %>)">Save</button>
-  </form>
-  <% } %>
 
-  <form class="item" action="/" method="post">
-    <input
-      type="text"
-      name="newItem"
-      placeholder="Add a new task"
-      autocomplete="off"
-    />
-    <button type="submit" name="list" value="<%= listTitle %>">+</button>
-  </form>
-</div>
+  <div class="box">
+    <% for(let i=0; i < newListItems.length; i++) { %>
 
-<script>
-  function toggleEditForm(index) {
-    const editForm = document.getElementById(`edit-form-${index}`);
-    const editButton = document.querySelector(
-      `.edit-form button[type="button"][onclick="toggleEditForm(${index})"]`
-    );
-    if (editForm.style.display === "none") {
-      editForm.style.display = "block";
-      editButton.innerText = "Cancel";
-    } else {
-      editForm.style.display = "none";
-      editButton.innerText = "Edit";
+      <div class="item-container">
+        <div class="item">
+
+          <input type="checkbox" class="status" onchange="getAnimation(<%= i %>)" />
+          <p>
+            <%= newListItems[i] %>
+          </p>
+          <form class="edit-form" action="/edit/<%= i %>" method="post">
+            <button type="button" onclick="toggleEditForm(<%= i %>)">Edit</button>
+          </form>
+          <form class="delete-form" action="/delete/<%= i %>" method="post">
+            <button type="submit">Delete</button>
+          </form>
+
+        </div>
+        <div class="animation">
+          <div class="wrapper"> <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+              <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+              <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+      <form class="edit-item-form" id="edit-form-<%= i %>" style="display: none" action="/edit/<%= i %>" method="post">
+        <input type="text" name="updatedItem" value="<%= newListItems[i] %>" autocomplete="off" />
+        <button type="button" onclick="saveEditedItem(<%= i %>)">Save</button>
+      </form>
+      <% } %>
+
+        <form class="item" action="/" method="post">
+          <input type="text" name="newItem" placeholder="Add a new task" autocomplete="off" />
+          <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+  </div>
+
+  <script>
+    function getAnimation(index) {
+      console.log(index);
+      var status = document.getElementsByClassName("status")[index];
+
+      if (status.checked) {
+        document.getElementsByClassName("animation")[index].style["transform"] = "translate(-400px,0px)";
+        document.getElementsByClassName("wrapper")[index].style.display = "flex";
+        setTimeout(function () { document.getElementsByClassName("animation")[index].style["transform"] = "translate(0px,0px)"; }, 2001)
+
+      } else {
+        document.getElementsByClassName("animation")[index].style["transform"] = "translate(0px,0px)";
+        document.getElementsByClassName("wrapper")[index].style.display = "none";
+      }
     }
-  }
+    function toggleEditForm(index) {
+      const editForm = document.getElementById(`edit-form-${index}`);
+      const editButton = document.querySelector(
+        `.edit-form button[type="button"][onclick="toggleEditForm(${index})"]`
+      );
+      if (editForm.style.display === "none") {
+        editForm.style.display = "block";
+        editButton.innerText = "Cancel";
+      } else {
+        editForm.style.display = "none";
+        editButton.innerText = "Edit";
+      }
+    }
 
-  function saveEditedItem(index) {
-    const updatedItem = document.querySelector(
-      `#edit-form-${index} input[name="updatedItem"]`
-    ).value;
-    const listItem = document.querySelectorAll(`.item p`)[index];
-    listItem.innerText = updatedItem;
-    toggleEditForm(index); // Hide the edit form after saving
-  }
-</script>
+    function saveEditedItem(index) {
+      const updatedItem = document.querySelector(
+        `#edit-form-${index} input[name="updatedItem"]`
+      ).value;
+      const listItem = document.querySelectorAll(`.item p`)[index];
+      listItem.innerText = updatedItem;
+      toggleEditForm(index); // Hide the edit form after saving
+    }
+  </script>
 
-<%- include("footer") -%>
+  <%- include("footer") -%>

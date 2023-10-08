@@ -18,6 +18,8 @@ h1 {
   background: white;
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
+
 }
 
 #heading {
@@ -25,11 +27,27 @@ h1 {
   text-align: center;
 }
 
+.item-container {
+  display: inline-flex;
+}
+
 .item {
-  min-height: 70px;
+  height: 70px;
   display: flex;
+  width: 400px;
   align-items: center;
   border-bottom: 1px solid #F1F1F1;
+}
+
+
+
+.animation {
+
+  min-height: 70px;
+  min-width: 400px;
+  background-color: #4e76b3;
+  transition: all 0.2s ease-in;
+
 }
 
 .item:last-child {
@@ -65,27 +83,41 @@ form {
 /* Style the "Edit" and "Delete" buttons as rounded rectangles */
 form.edit-form button,
 form.delete-form button {
-  min-height: 30px; /* Adjust the height as needed */
-  width: auto; /* Adjust the width as needed */
-  padding: 5px 10px; /* Adjust the padding as needed */
-  font-size: 16px; /* Adjust the font size as needed */
+  min-height: 30px;
+  /* Adjust the height as needed */
+  width: auto;
+  /* Adjust the width as needed */
+  padding: 5px 10px;
+  /* Adjust the padding as needed */
+  font-size: 16px;
+  /* Adjust the font size as needed */
   border: none;
-  border-radius: 10px; /* Adjust the border radius as needed */
-  background-color: #A683E3; /* Button background color */
-  color: #fff; /* Button text color */
+  border-radius: 10px;
+  /* Adjust the border radius as needed */
+  background-color: #A683E3;
+  /* Button background color */
+  color: #fff;
+  /* Button text color */
   cursor: pointer;
 }
 
 /* Style the "Save" button as a smaller rounded rectangle */
 form.edit-item-form button[type="button"] {
-  min-height: 30px; /* Adjust the height as needed */
-  width: auto; /* Adjust the width as needed */
-  padding: 5px 10px; /* Adjust the padding as needed */
-  font-size: 16px; /* Adjust the font size as needed */
+  min-height: 30px;
+  /* Adjust the height as needed */
+  width: auto;
+  /* Adjust the width as needed */
+  padding: 5px 10px;
+  /* Adjust the padding as needed */
+  font-size: 16px;
+  /* Adjust the font size as needed */
   border: none;
-  border-radius: 10px; /* Adjust the border radius as needed */
-  background-color: #A683E3; /* Button background color */
-  color: #fff; /* Button text color */
+  border-radius: 10px;
+  /* Adjust the border radius as needed */
+  background-color: #A683E3;
+  /* Button background color */
+  color: #fff;
+  /* Button text color */
   cursor: pointer;
 }
 
@@ -95,20 +127,23 @@ button[type="submit"][name="list"] {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #A683E3; /* Updated background color */
+  background-color: #A683E3;
+  /* Updated background color */
   color: #fff;
   font-size: 30px;
   padding: 0;
-  line-height: 50px; /* Set line-height to the same as height to vertically center the text */
+  line-height: 50px;
+  /* Set line-height to the same as height to vertically center the text */
   border-width: 0;
   transition: all 0.2s ease-in;
 }
+
 /* Adding hover effet for making it visually distinct and appealing */
-button[type="submit"][name="list"]:hover{
-background-color: black;
-transform: scale(1.1);
-transform: rotate(90deg);
-font-size: 40px;
+button[type="submit"][name="list"]:hover {
+  background-color: black;
+  transform: scale(1.1);
+  transform: rotate(90deg);
+  font-size: 40px;
 }
 
 input[type="text"] {
@@ -138,7 +173,7 @@ footer {
   text-align: center;
 }
 
-.mh1{
+.mh1 {
   font-size: 60px;
   margin: 0;
   color: #00204a;
@@ -146,7 +181,69 @@ footer {
   text-shadow: 2px 4px #4e76b3;
 }
 
-header{
+header {
   text-align: center;
   padding-top: 20px;
+}
+
+.wrapper {
+  height: 71px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #A683E3;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #A683E3;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.9s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0
+  }
+}
+
+@keyframes scale {
+
+  0%,
+  100% {
+    transform: none
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1)
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #A683E3
+  }
 }
