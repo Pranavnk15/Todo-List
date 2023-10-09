@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --config .eslintrc.js \"./**/*.js\""
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "express": "^4.18.2",
     "nodeman": "^1.1.2"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.51.0"
+  }
 }

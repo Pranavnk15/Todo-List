@@ -61,27 +61,37 @@ Before you begin, ensure you have the following installed on your system:
 
 ### Start the Application
 
-Once you've installed the dependencies, you can start the Todo-List application by running the following command:
+The Todo-List application can be launched when the dependencies have been installed by typing the following command:
+
 
 ```bash
 nodemon app.js
 ```
 
-The server will start, and you can access the application in your web browser at [http://localhost:3000](http://localhost:3000).
+You can access the application in your web browser at once the server has started up at [http://localhost:3000](http://localhost:3000).
 
 ### Usage Tips
 
-- Create and manage your to-do lists effortlessly by entering tasks and using the website's intuitive interface.
+- Use the website's user-friendly interface to enter tasks and easily create and manage your to-do lists.
 
-- Organize your tasks by categorizing them, setting due dates, and prioritizing them for better task management.
+- For better task organization, categorize your tasks, assign due dates, and prioritize them.
 
-If you'd like to contribute to this project, please check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
+For instructions on how to donate to this project, please see the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 
-# OUR AMAZING CONTRIBUTORS 🧑‍💻👩‍💻
+
+
+## Our Beloved Contributors 😍
+
 <a href="https://github.com/Pranavnk15/Todo-List/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Pranavnk15/Todo-List" />
+  <img align="center" src="https://contrib.rocks/image?max=1000&repo=Pranavnk15/Todo-List" />
 </a>
+<br>
+<br>
+✨✨ A big thanks to all our contributors who have made this project better with their valuable contributions! We appreciate your efforts and dedication.
+<hr>
+<h3 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !!
+</h3>
 <br/>
 
 
