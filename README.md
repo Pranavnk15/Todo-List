@@ -80,10 +80,18 @@ For instructions on how to donate to this project, please see the [CONTRIBUTING.
 
 
 
-# OUR AMAZING CONTRIBUTORS 🧑‍💻👩‍💻
+
+## Our Beloved Contributors 😍
+
 <a href="https://github.com/Pranavnk15/Todo-List/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Pranavnk15/Todo-List" />
+  <img align="center" src="https://contrib.rocks/image?max=1000&repo=Pranavnk15/Todo-List" />
 </a>
+<br>
+<br>
+✨✨ A big thanks to all our contributors who have made this project better with their valuable contributions! We appreciate your efforts and dedication.
+<hr>
+<h3 align="center"> DON'T FORGET TO ⭐ THIS REPOSITORY !!
+</h3>
 <br/>
 
 
