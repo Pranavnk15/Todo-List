@@ -1,7 +1,7 @@
 # .github/workflows/esLint.yml
 
 # Continuous Integration (CI) Workflow
-name: ci
+name: esLint Workflow
 
 # This workflow will run whenever we push commits to the `main` branch, or
 # whenever there's a pull request to the `main` branch. See:
