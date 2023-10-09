@@ -1,30 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Yellowtail&display=swap');
+
+html::before{
+  content: "";
+  height: 1000px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  /* background: url('https://wallpapers.com/images/hd/violet-background-luybjj6wz4y85l6m.jpg'); */
+  /* background: url('https://img.freepik.com/free-photo/color-smoke-abstract-wallpaper-aesthetic-background-design_53876-133390.jpg'); */
+  /* background: url('https://wallpapers.com/images/hd/dark-purple-blue-sparkling-sky-1vds82j6e3ycq9r1.jpg'); */
+  /* background: url('https://c4.wallpaperflare.com/wallpaper/80/213/299/dark-purple-background-photoshop-matte-paint-flowers-hd-wallpaper-preview.jpg'); */
+  background: url('https://img.freepik.com/premium-photo/abstract-neon-background-luminous-swirling_41470-612.jpg');
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: .9;
+  z-index: -1;
+}
 
 html {
-  background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  /* background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%); */
   min-height: 1000px;
   font-family: 'helvetica neue';
+
 }
 
 h1 {
-  color: #fff;
+  /* color: #fff; */
   padding: 10px;
+  background: rgb(176,37,4);
+  background: linear-gradient(30deg, rgb(218, 68, 30) 18%, rgb(235, 180, 17) 98%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+   color: rgb(245, 168, 25);
+
 }
+
 
 .box {
   max-width: 400px;
   margin: 50px auto;
-  background: white;
+  /* background: white; */
+  background-color: #897fd5;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 15px 15px 15px -5px  rgba(0, 0, 0, 0.3);
   overflow-x: hidden;
+  outline: 1px  solid rgb(19, 26, 85);
 
 }
-
 #heading {
-  background-color: #A683E3;
+  /* background-color: #A683E3;
+   */
+   background: rgb(25,11,50);
+  background: linear-gradient(335deg, rgba(25,11,50,1) 28%, rgba(36,16,74,1) 60%, rgba(50,12,128,1) 99%);
+  position: relative;
   text-align: center;
+  transition: all .5s ease-in-out;
+  box-shadow: 6px -3px 15px white;
+}
+
+#heading:hover{
+  transition: all .5s ease-in-out;
+  background: rgb(25,11,50);
+  background: linear-gradient(0deg, rgba(25,11,50,1) 40%, rgba(78, 48, 134, 0.856) 70%, rgb(110, 65, 199) 99%);
+  
 }
 
 .item-container {
@@ -56,13 +99,14 @@ h1 {
 
 input:checked+p {
   text-decoration: line-through;
-  text-decoration-color: #A683E3;
+  text-decoration-color: #0d041b;
 }
 
 input[type="checkbox"] {
   margin: 20px;
   width: 20px;
   height: 20px;
+  border: .5px  rgb(25,11,50);
 }
 
 
@@ -70,9 +114,20 @@ input[type="checkbox"] {
 p {
   margin: 0;
   padding: 20px;
-  font-size: 20px;
-  font-weight: 200;
-  color: #00204a;
+  font-size: 25px;
+  font-weight: 650;
+  /* color: #0b133f; */
+  color: white;
+}
+footer p:nth-child(2) a{
+  color: aqua;
+}
+footer p:nth-child(3) a{
+  color: rgb(219, 36, 204);
+}
+
+.heart{
+    color:  red;
 }
 
 form {
@@ -94,7 +149,9 @@ form.delete-form button {
   border: none;
   border-radius: 10px;
   /* Adjust the border radius as needed */
-  background-color: #A683E3;
+  /* background-color: #A683E3; */
+  background: rgb(25,11,50);
+background: linear-gradient(335deg, rgba(25,11,50,1) 28%, rgba(36,16,74,1) 60%, rgba(50,12,128,1) 99%);
   /* Button background color */
   color: #fff;
   /* Button text color */
@@ -114,7 +171,10 @@ form.edit-item-form button[type="button"] {
   border: none;
   border-radius: 10px;
   /* Adjust the border radius as needed */
-  background-color: #A683E3;
+  /* background-color: #A683E3; */
+  background: rgb(25,11,50);
+  background: linear-gradient(335deg, rgba(25,11,50,1) 28%, rgba(36,16,74,1) 60%, rgba(50,12,128,1) 99%);
+  
   /* Button background color */
   color: #fff;
   /* Button text color */
@@ -127,15 +187,19 @@ button[type="submit"][name="list"] {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #A683E3;
+  /* background-color: #A683E3; */
+  background: rgb(25,11,50);
+  background: linear-gradient(335deg, rgba(25,11,50,1) 28%, rgba(36,16,74,1) 60%, rgba(50,12,128,1) 99%);
+  
   /* Updated background color */
-  color: #fff;
+  color: rgb(255, 166, 0);
   font-size: 30px;
   padding: 0;
   line-height: 50px;
   /* Set line-height to the same as height to vertically center the text */
   border-width: 0;
   transition: all 0.2s ease-in;
+  
 }
 
 /* Adding hover effet for making it visually distinct and appealing */
@@ -148,13 +212,16 @@ button[type="submit"][name="list"]:hover {
 
 input[type="text"] {
   text-align: center;
-  height: 60px;
+  height: 48px;
   top: 10px;
   border: none;
-  background: transparent;
+  /* background: transparent; */
+  background: #958cdcc2;
   font-size: 20px;
   font-weight: 200;
-  width: 313px;
+  width: 300px;
+  margin-right: 10px;
+  border-radius: 50px;
 }
 
 input[type="text"]:focus {
@@ -163,23 +230,82 @@ input[type="text"]:focus {
 }
 
 ::placeholder {
-  color: grey;
+  color: rgb(19, 81, 110);
   opacity: 1;
 }
 
 footer {
   color: white;
-  color: rgba(0, 0, 0, 0.5);
+  /* color: rgba(0, 0, 0, 0.5); */
   text-align: center;
 }
 
-.mh1 {
-  font-size: 60px;
-  margin: 0;
-  color: #00204a;
-  font-family: 'Montserrat', sans-serif;
-  text-shadow: 2px 4px #4e76b3;
+
+.mh1::before{
+  content: "";
+  width: 0;
+  height: 6px;
+  display: block;
+  position: relative;
+  left: 0;
+  bottom:  70px;
+  top:0;
+  margin-left:auto ;
+  margin-right: auto;
+  transition: all .5s ease-in-out;
+  background-color: rgb(236, 157, 11);
+  border-radius: 50%;
 }
+.mh1:hover::before{
+  width: 400px;
+}
+
+.mh1 {
+  position: relative;
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 900;  
+  transition: all .5s ease-in-out;
+  font-family: 'Lobster', cursive;
+  font-family: 'Yellowtail', cursive;
+  letter-spacing: 5px;
+  background: rgb(190, 51, 16);
+  background: linear-gradient(30deg, rgb(202, 53, 15) 18%, rgb(235, 180, 17) 98%);
+-webkit-text-fill-color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+}
+.mh1::after{
+  content: "";
+  width: 0;
+  height: 6px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-left:auto ;
+  margin-right: auto;
+  transition: all .5s ease-in-out;
+  background-color: rgb(233, 157, 16);
+  border-radius: 50%;
+  
+}
+.mh1:hover::after{
+  width: 400px;
+  
+}
+
+.mh1:hover{
+  
+  transition: all .5s ease-in-out;
+  transform: scaleX(20px);
+  letter-spacing: 10px;
+  font-size: 4.2rem;
+  
+}
+
+
 
 header {
   text-align: center;
