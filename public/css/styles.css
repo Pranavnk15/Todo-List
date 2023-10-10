@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 html::before{
   content: "";
@@ -16,7 +17,8 @@ html::before{
   left: 0;
   background-size: cover;
   background-position: center;
-  opacity: .9;
+  /* opacity: ; */
+  filter: contrast(200%);
   z-index: -1;
 }
 
@@ -44,7 +46,6 @@ h1 {
 .box {
   max-width: 400px;
   margin: 50px auto;
-  /* background: white; */
   background-color: #897fd5;
   border-radius: 5px;
   box-shadow: 15px 15px 15px -5px  rgba(0, 0, 0, 0.3);
@@ -52,21 +53,24 @@ h1 {
   outline: 1px  solid rgb(19, 26, 85);
 
 }
+
+.item-container:hover{
+  background-color: #7065bd;
+}
+
 #heading {
-  /* background-color: #A683E3;
-   */
-   background: rgb(25,11,50);
-  background: linear-gradient(335deg, rgba(25,11,50,1) 28%, rgba(36,16,74,1) 60%, rgba(50,12,128,1) 99%);
+   background: rgb(25,11,50); 
+  background-image: linear-gradient(330deg, rgb(13 5 28) 28%, rgb(46 22 93) 60%, rgba(50,12,128,1) 99%);
   position: relative;
   text-align: center;
-  transition: all .5s ease-in-out;
+  transition: all 1s ease-in-out;
   box-shadow: 6px -3px 15px white;
 }
 
 #heading:hover{
-  transition: all .5s ease-in-out;
-  background: rgb(25,11,50);
-  background: linear-gradient(0deg, rgba(25,11,50,1) 40%, rgba(78, 48, 134, 0.856) 70%, rgb(110, 65, 199) 99%);
+  transition: all 1s ease-in-out;
+   background: rgb(16,12,42);
+  background-image: linear-gradient(30deg, rgb(13 5 28) 28%, rgb(46 22 93) 60%, rgba(50,12,128,1) 99%);
   
 }
 
@@ -116,7 +120,6 @@ p {
   padding: 20px;
   font-size: 25px;
   font-weight: 650;
-  /* color: #0b133f; */
   color: white;
 }
 footer p:nth-child(2) a{
@@ -257,23 +260,23 @@ footer {
   border-radius: 50%;
 }
 .mh1:hover::before{
-  width: 400px;
+  width: 650px;
 }
 
 .mh1 {
   position: relative;
-  font-size: 4rem;
-  margin: 0;
-  font-weight: 900;  
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin: 0;  
   transition: all .5s ease-in-out;
   font-family: 'Lobster', cursive;
-  font-family: 'Yellowtail', cursive;
+  /* font-family: 'Yellowtail', cursive; */
   letter-spacing: 5px;
   background: rgb(190, 51, 16);
-  background: linear-gradient(30deg, rgb(202, 53, 15) 18%, rgb(235, 180, 17) 98%);
--webkit-text-fill-color: transparent;
-background-clip: text;
--webkit-background-clip: text;
+  background: linear-gradient(60deg, rgb(192, 61, 29) 20%, rgb(238, 180, 7) 98%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .mh1::after{
   content: "";
@@ -292,20 +295,15 @@ background-clip: text;
   
 }
 .mh1:hover::after{
-  width: 400px;
-  
+  width: 650px;
 }
 
-.mh1:hover{
-  
+.mh1:hover{  
   transition: all .5s ease-in-out;
-  transform: scaleX(20px);
-  letter-spacing: 10px;
-  font-size: 4.2rem;
-  
+  transform: scaleX(50px);
+  letter-spacing: 20px;
+  font-size: 4.8rem; 
 }
-
-
 
 header {
   text-align: center;
