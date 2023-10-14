@@ -180,7 +180,7 @@ background: linear-gradient(335deg, rgba(25,11,50,1) 28%, rgba(36,16,74,1) 60%, 
   /* Button background color */
   color: #fff;
   /* Button text color */
-
+position: absolute;
 }
 
 /* Style the "Save" button as a smaller rounded rectangle */
@@ -204,6 +204,16 @@ form.edit-item-form button[type="button"] {
   color: #fff;
   /* Button text color */
   cursor: pointer;
+}
+
+.edit-form {
+  top: 10px;
+  margin-left: 10px;
+}
+
+.delete-form {
+  top: 10px;
+  margin-left: 50px;
 }
 
 /* Style the "+" button with the desired background color */
