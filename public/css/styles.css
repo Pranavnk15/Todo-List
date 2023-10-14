@@ -207,12 +207,12 @@ form.edit-item-form button[type="button"] {
 }
 
 .edit-form {
-  top: 10px;
+  top: 20px;
   margin-left: 10px;
 }
 
 .delete-form {
-  top: 10px;
+  top: 20px;
   margin-left: 50px;
 }
 
