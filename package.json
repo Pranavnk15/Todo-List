@@ -4,7 +4,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --config .eslintrc.js \"./**/*.js\""
+    "lint": "eslint --config .eslintrc.js \"./**/*.js\"",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
