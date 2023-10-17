@@ -237,6 +237,7 @@ button[type="submit"][name="list"] {
   
 }
 
+
 /* Adding hover effet for making it visually distinct and appealing */
 button[type="submit"][name="list"]:hover {
   background-color: black;
@@ -245,6 +246,21 @@ button[type="submit"][name="list"]:hover {
   font-size: 40px;
 
 }
+
+.login-button button {
+  background: linear-gradient(335deg, rgba(25, 11, 50, 1) 28%, rgba(36, 16, 74, 1) 60%, rgba(50, 12, 128, 1) 99%);
+  color: rgb(255, 166, 0);
+  font-size: 16px; 
+  padding: 10px 20px;
+  border: none; 
+  cursor: pointer; 
+
+  position: fixed;
+  top: 40px; 
+  right: 40px; 
+}
+
+
 
 input[type="text"] {
   text-align: center;
