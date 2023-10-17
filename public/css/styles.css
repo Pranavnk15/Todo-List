@@ -42,14 +42,28 @@ h1 {
 
 }
 
+.box::-webkit-scrollbar{
+  width: 10px;
+}
+
+.box::-webkit-scrollbar-track {
+  background: #897fd5;        
+}
+
+.box::-webkit-scrollbar-thumb {
+  background-color: rgb(19, 26, 85);    
+  border-radius: 20px;         
+}
 
 .box {
   max-width: 400px;
+  max-height: 300px;
   margin: 50px auto;
   background-color: #897fd5;
   border-radius: 5px;
   box-shadow: 15px 15px 15px -5px  rgba(0, 0, 0, 0.3);
   overflow-x: hidden;
+  overflow-y: auto;
   outline: 1px  solid rgb(19, 26, 85);
 
 }
