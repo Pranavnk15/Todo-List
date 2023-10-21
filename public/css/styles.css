@@ -79,6 +79,7 @@ h1 {
   text-align: center;
   transition: all 1s ease-in-out;
   box-shadow: 6px -3px 15px white;
+  margin-top: 10px;
 }
 
 #heading:hover{
@@ -195,6 +196,8 @@ background: linear-gradient(335deg, rgba(25,11,50,1) 28%, rgba(36,16,74,1) 60%, 
   color: #fff;
   /* Button text color */
 position: absolute;
+cursor: pointer;
+margin-left: -20px;
 }
 
 /* Style the "Save" button as a smaller rounded rectangle */
