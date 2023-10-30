@@ -56,7 +56,7 @@ h1 {
 }
 
 .box {
-  max-width: 400px;
+  max-width: 450px;
   max-height: 300px;
   margin: 50px auto;
   background-color: #897fd5;
@@ -97,7 +97,7 @@ h1 {
 .item {
   min-height: 70px;
   display: flex;
-  width: 400px;
+  width: 450px;
   align-items: center;
   border-bottom: 1px solid #F1F1F1;
 }
@@ -288,7 +288,7 @@ input[type="text"] {
   background: #958cdcc2;
   font-size: 20px;
   font-weight: 200;
-  width: 300px;
+  width: 350px;
   margin-right: 10px;
   border-radius: 50px;
 }
