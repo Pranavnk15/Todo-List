@@ -79,6 +79,10 @@ You can access the application in your web browser at once the server has starte
 For instructions on how to donate to this project, please see the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 
+### License
+
+The Todo-List project is available as open source under the terms of the [MIT license](https://github.com/Pranavnk15/Todo-List/blob/main/LICENSE)
+
 
 
 ## Our Beloved Contributors 😍
