@@ -9,10 +9,10 @@ html::before{
   position: absolute;
   display: block;
   /* background: url('https://wallpapers.com/images/hd/violet-background-luybjj6wz4y85l6m.jpg'); */
-  /* background: url('https://img.freepik.com/free-photo/color-smoke-abstract-wallpaper-aesthetic-background-design_53876-133390.jpg'); */
-  /* background: url('https://wallpapers.com/images/hd/dark-purple-blue-sparkling-sky-1vds82j6e3ycq9r1.jpg'); */
-  /* background: url('https://c4.wallpaperflare.com/wallpaper/80/213/299/dark-purple-background-photoshop-matte-paint-flowers-hd-wallpaper-preview.jpg'); */
-  background: url('https://img.freepik.com/premium-photo/abstract-neon-background-luminous-swirling_41470-612.jpg');
+  background: url('https://plus.unsplash.com/premium_photo-1683417272601-dbbfed0ed718?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRvZG8lMjBsaXN0fGVufDB8fDB8fHww'); 
+  /* background: url('https://wallpapers.com/images/hd/dark-purple-blue-sparkling-sky-1vds82j6e3ycq9r1.jpg');
+  /* background: url('https://c4.wallpaperflare.com/wallpaper/80/213/299/dark-purple-background-photoshop-matte-paint-flowers-hd-wallpaper-preview.jpg');
+  background: url('https://img.freepik.com/premium-photo/abstract-neon-background-luminous-swirling_41470-612.jpg'); */
   top: 0;
   left: 0;
   background-size: cover;
@@ -47,11 +47,11 @@ h1 {
 }
 
 .box::-webkit-scrollbar-track {
-  background: #897fd5;        
+  background: #9892cb;        
 }
 
 .box::-webkit-scrollbar-thumb {
-  background-color: rgb(19, 26, 85);    
+  background-color: rgb(69, 78, 164);    
   border-radius: 20px;         
 }
 
@@ -118,7 +118,7 @@ h1 {
 
 input:checked+p {
   text-decoration: line-through;
-  text-decoration-color: #0d041b;
+  text-decoration-color: #8e77b3;
 }
 
 input[type="checkbox"] {
